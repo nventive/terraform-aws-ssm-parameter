@@ -31,6 +31,7 @@ module "ssm_parameter" {
   value_base64 = "VXBVcERvd25Eb3duTGVmdFJpZ2h0TGVmdFJpZ2h0QkE="
 }
 ```
+
 ## Requirements
 
 | Name | Version |
@@ -38,17 +39,20 @@ module "ssm_parameter" {
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 2.0 |
 | <a name="requirement_null"></a> [null](#requirement\_null) | >= 2.0 |
+
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 2.0 |
+
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_ssm_label"></a> [ssm\_label](#module\_ssm\_label) | cloudposse/label/null | 0.25.0 |
 | <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
+
 ## Resources
 
 | Name | Type |
@@ -56,6 +60,7 @@ module "ssm_parameter" {
 | [aws_iam_policy.ssm_get](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
 | [aws_ssm_parameter.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
 | [aws_iam_policy_document.ssm](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -83,6 +88,7 @@ module "ssm_parameter" {
 | <a name="input_type"></a> [type](#input\_type) | Type of the parameter. Valid types are `String`, `StringList` and `SecureString`. | `string` | `"SecureString"` | no |
 | <a name="input_value"></a> [value](#input\_value) | Value of the parameter (may be overwritten by `value_base64`) | `string` | `""` | no |
 | <a name="input_value_base64"></a> [value\_base64](#input\_value\_base64) | Base64 encoded value of the parameter (if set, will override `value`) | `string` | `""` | no |
+
 ## Outputs
 
 | Name | Description |
@@ -92,6 +98,7 @@ module "ssm_parameter" {
 | <a name="output_iam_policy_get_arn"></a> [iam\_policy\_get\_arn](#output\_iam\_policy\_get\_arn) | ARN of the IAM Policy with GET permission SSM parameter. |
 | <a name="output_id"></a> [id](#output\_id) | ID of the SSM parameter. |
 | <a name="output_name"></a> [name](#output\_name) | Name of the SSM parameter. |
+
 ## Breaking Changes
 
 Please consult [BREAKING\_CHANGES.md](BREAKING\_CHANGES.md) for more information about version
